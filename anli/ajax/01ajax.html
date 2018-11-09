@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>AJAX</title>
+<style>
+.myBtn{
+	background:#3498db;
+	color:#fff;
+	font-size:14px;
+	text-align:center;
+	width:100px;
+	height:36px;
+	line-height:34px;
+	border:none 0;
+	cursor:pointer;
+}
+</style>
+<script>
+window.onload = function() {
+	
+	var oBtn = document.getElementById('btn');
+	
+	
+	oBtn.onclick = function() {
+		
+		//打开浏览器
+		var xhr = new XMLHttpRequest();
+		//在地址栏输入地址
+		xhr.open('get','links/1.txt',true);
+		//提交
+		xhr.send();
+		
+		//等待服务器返回内容
+		xhr.onreadystatechange = function() {
+			
+			if ( xhr.readyState == 4 ) {
+				alert( xhr.responseText );
+			}
+			
+		}
+		
+	}
+}
+</script>
+</head>
+
+<body>
+	<input type="button" value="按钮" id="btn" class="myBtn" />
+</body>
+</html>

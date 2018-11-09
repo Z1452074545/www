@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="button"value="点击" id="btn"/>
+		
+		<script>
+			var oBtn=document.getElementById('btn');
+			oBtn.onclick=function(){
+				var xhr=null;
+				try{
+					xhr=new XMLHttpRequset();
+				}chtch{
+					xhr=new ActiveXObject('Microsoft.XMLHTTP');
+				}
+				xhr.open('get','../ajax/links/2.get.php?username='+encodeURI('小明')+'&age=23&' + new Date().getTime(),true);
+				xhr.send();
+				
+				
+				xhr.onreadystatechange = function() {
+			
+			if ( xhr.readyState == 4 ) {
+				if ( xhr.status == 200 ) {
+					alert( xhr.responseText );
+				} else {
+					alert('出错了,Err：' + xhr.status);
+				}
+			}
+			
+		}
+			}
+		</script>
+	</body>
+</html>

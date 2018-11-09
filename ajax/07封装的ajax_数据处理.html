@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>AJAX</title>
+<style>
+.myBtn{
+	background:#3498db;
+	color:#fff;
+	font-size:14px;
+	text-align:center;
+	width:100px;
+	height:36px;
+	line-height:34px;
+	border:none 0;
+	cursor:pointer;
+	margin-left:37px;
+}
+#content{
+	
+}
+#content li{
+	list-style:none;
+	padding:10px 0;
+	white-space:1px;
+	border-bottom:1px dashed #999;
+}
+#content li a{
+	color:#000;
+	text-decoration:none;
+	transition: all 0.3s ease 0s;
+}
+#content li:hover a{
+	color:#246ab8;
+	padding-left:10px;
+	transition: all 0.3s ease 0s;
+}
+#content li span{
+	color:#777;
+}
+</style>
+
+<script src="js/ajax.js"></script>
+<script>
+window.onload = function() {
+	
+	var oBtn = document.getElementById('btn');
+	
+	
+	oBtn.onclick = function() {
+		
+		ajax('get','links/getNews.php','',function(data) {
+			var data = JSON.parse( data );
+				
+			var oUl = document.getElementById('content');
+			var html = '';
+			for (var i=0; i<data.length; i++) {
+				html += '<li><a href="">'+data[i].title+'</a> [<span>'+data[i].date+'</span>]</li>';
+			}
+			oUl.innerHTML = html;
+		});
+		
+	}
+}
+</script>
+</head>
+
+<body>
+	<input type="button" value="按钮" id="btn" class="myBtn" />
+    <ul id="content"></ul>
+</body>
+</html>

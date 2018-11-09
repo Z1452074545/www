@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>AJAX</title>
+<style>
+.myBtn{
+	background:#3498db;
+	color:#fff;
+	font-size:14px;
+	text-align:center;
+	width:100px;
+	height:36px;
+	line-height:34px;
+	border:none 0;
+	cursor:pointer;
+}
+</style>
+<script>
+window.onload = function() {
+	
+	var oBtn = document.getElementById('btn');
+	
+	
+	oBtn.onclick = function() {
+		
+		var xhr = null;
+		try {
+			xhr = new XMLHttpRequest();
+		} catch (e) {
+			xhr = new ActiveXObject('Microsoft.XMLHTTP');
+		}
+		
+		xhr.open('post','links/2.post.php',true);
+		//post方式，数据放在send()里面作为参数传递
+		xhr.setRequestHeader('content-type', 'application/x-www-form-urlencoded');//申明发送的数据类型
+		//post没有缓存问题
+		//无需编码
+		xhr.send('username=小明&age=33');
+		
+		xhr.onreadystatechange = function() {
+			
+			if ( xhr.readyState == 4 ) {
+				if ( xhr.status == 200 ) {
+					alert( xhr.responseText );
+				} else {
+					alert('出错了,Err：' + xhr.status);
+				}
+			}
+			
+		}
+		
+	}
+}
+</script>
+</head>
+
+<body>
+	<input type="button" value="按钮" id="btn" class="myBtn" />
+</body>
+</html>

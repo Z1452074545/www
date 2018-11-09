@@ -1,0 +1,441 @@
+html, body {
+    background: rgb(5, 14, 36);
+}
+
+.wd_banner {
+    height: 625px;
+    width: 100%;
+    background: red;
+    position: relative;
+    position: absolute;
+    top: 70px;
+    cursor: pointer;
+}
+
+.wd_banner img {
+    width: 100%;
+    height: 625px;
+    display: none;
+}
+
+.wd_ban_new {
+    width: 270px;
+    height: 320px;
+    position: absolute;
+    top: 155px;
+    right: 110px;
+    background: rgba(44, 44, 44, 0.8);
+    padding-top: 7px;
+    box-sizing: border-box;
+    border: 1px solid grey;
+}
+
+.wd_ban_new ul li.new_bg {
+    background: rgb(228, 0, 119);
+}
+
+.wd_ban_new ul li {
+    height: 38px;
+    width: 100%;
+    padding-left: 20px;
+    box-sizing: border-box;
+    line-height: 40px;
+
+}
+
+.wd_ban_new ul li a {
+    font-size: 14px;
+    color: rgb(255, 255, 255);
+}
+
+.wd_contert1 {
+    width: 100%;
+    height: 685px;
+    position: relative;
+    position: absolute;
+    top: 695px;
+}
+
+.ct1_1 {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    margin-left: -84px;
+}
+
+.ct1_2 {
+    width: 1060px;
+    position: absolute;
+    top: 220px;
+    left: 50%;
+    margin-left: -530px;
+}
+
+.ct1_2 ul li {
+    float: left;
+    padding: 0 80px 0 80px;
+    width: 210px;
+    box-sizing: border-box;
+}
+.ct1_2 ul li{
+    font-weight: bold;
+    font-size: 24px;
+    color: rgb(153,153,153);
+    cursor: pointer;
+}
+.ct1_2 ul li:hover{
+    color: white;
+    /*text-shadow: 1px 1px 0 rgb(228, 0, 119),*/
+                           /*-1px -1px 0 rgb(228, 0, 119);*/
+    text-shadow: 0 5px 30px rgb(228, 0, 119);
+    font-size: 38px;
+    transition: all 1s;
+}
+.ct1_2 ul li.ct1_2_new{
+    text-shadow: 0 5px 30px rgb(228, 0, 119);
+    font-size: 38px;
+    color: white;
+}
+.ct1_3{
+    width: 1200px;
+    height: 340px;
+    position: relative;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -600px;
+    background: green;
+    overflow: hidden;
+    box-shadow: 0 0 25px #999;
+    border-radius: 5px;
+}
+.ct1_3 dl{
+    width: 2700px;
+    height: 340px;
+    position: absolute;
+
+}
+.ct1_3 dl dd{
+    width: 400px;
+    height: 340px;
+    float: left;
+    background: rgb(36,41,54);
+}
+/*.ct1_3 dl dd:nth-child(odd){*/
+    /*background: blue;*/
+/*}*/
+.ct1_3 dl dd p{
+    width: 400px;
+    height: 266px;
+    overflow: hidden;
+}
+.ct1_3 dl dd p img{
+    width: 400px;
+    height: 266px;
+}
+.ct1_3 dl dd p img:hover{
+    /*width: 500px;*/
+    /*height: 330px;*/
+    transition: all 1s;
+   transform: scale(1.6);
+}
+.ct1_3 dl dd ul li{
+    font-size: 12px;
+    color: rgb(126,126,126);
+    padding-left: 20px;
+    line-height: 20px;
+}
+.ct1_3 dl dd ul li a{
+    font-size: 14px;
+    color: rgb(255,245,201);
+    line-height: 30px;
+}
+.ct1_3 dl dd ul li a:hover{
+    color: rgb(228, 0, 119);
+}
+.wd_contert2{
+    width: 100%;
+    height: 780px;
+    position: relative;
+    position: absolute;
+    top: 1470px;
+}
+.ct2_1{
+  position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -85px;
+}
+.ct2_2{
+    width: 900px;
+    height: 110px;
+    position:absolute;
+    top: 190px;
+    left: 50%;
+    margin-left: -450px;
+
+}
+.ct2_2 ul li{
+    width: 180px;
+    height: 110px;
+    float: left;
+    overflow: hidden;
+    text-align: center;
+    cursor: pointer;
+}
+.ct2_2 ul li:nth-child(1){
+    background: url("../imgs/wd_ct2-2_1.png") no-repeat;
+    background-position: 33px 0;
+}
+.ct2_2 ul li:nth-child(1):hover{
+    background: url("../imgs/wd_ct2-2_1.png") no-repeat;
+    background-position: 33px -110px;
+}
+.ct2_2 ul li:nth-child(2){
+    background: url("../imgs/wd_ct2-2_2.png") no-repeat;
+    background-position: 33px 0;
+}
+.ct2_2 ul li:nth-child(2):hover{
+    background: url("../imgs/wd_ct2-2_2.png") no-repeat;
+    background-position: 33px -110px;
+}
+.ct2_2 ul li:nth-child(3){
+    background: url("../imgs/wd_ct2-2_3.png") no-repeat;
+    background-position: 33px 0;
+}
+.ct2_2 ul li:nth-child(3):hover{
+    background: url("../imgs/wd_ct2-2_3.png") no-repeat;
+    background-position: 33px -110px;
+}
+.ct2_2 ul li:nth-child(4){
+    background: url("../imgs/wd_ct2-2_4.png") no-repeat;
+    background-position: 33px 0;
+}
+.ct2_2 ul li:nth-child(4):hover{
+    background: url("../imgs/wd_ct2-2_4.png") no-repeat;
+    background-position: 33px -110px;
+}
+.ct2_2 ul li:nth-child(5){
+    background: url("../imgs/wd_ct2-2_5.png") no-repeat;
+    background-position: 33px 0;
+}
+.ct2_2 ul li:nth-child(5):hover{
+    background: url("../imgs/wd_ct2-2_5.png") no-repeat;
+    background-position: 33px -110px;
+}
+.ct2_3{
+    width: 1200px;
+    height: 400px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -600px;
+    box-shadow: 0 0 25px #999;
+    border-radius: 5px;
+}
+.ct2_3 ul{
+    display: none;
+}
+.ct2_3 ul li{
+    float: left;
+    width: 300px;
+    height: 200px;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+}
+.ct2_3 ul li img{
+    width: 300px;
+    height: 200px;
+}
+.ct2_3 ul li:nth-child(1){
+    width: 600px;
+    height: 400px;
+}
+.ct2_3 ul li:nth-child(1) img{
+    width: 600px;
+    height: 400px;
+
+}
+.ct2_3 ul li img:hover{
+    width: 400px;
+    height: 300px;
+    transition: all 1s;
+}
+.ct2_3 ul li:nth-child(1) img:hover{
+    width: 700px;
+    height: 500px;
+    transition: all 1s;
+}
+.ct2_3 ul li:nth-child(1) p{
+    position: absolute;
+    top: 360px;
+}
+.ct2_3 ul li p{
+    position: absolute;
+    top: 160px;
+    width: 100%;
+    height: 40px;
+    background: rgba(34,34,34,0.6);
+    color: rgb(213,213,213);
+    font-size: 14px;
+    box-sizing: border-box;
+    padding-left: 20px;
+    padding-top: 6px;
+
+}
+.ct2_3 ul li p span{
+    font-size: 12px;
+
+}
+.ct2_3 ul li p:hover{
+    color: rgb(228, 0, 119);
+}
+.wd_contert3{
+    width: 100%;
+    height: 580px;
+    position: relative;
+    position: absolute;
+    top: 2360px;
+}
+.ct3_1{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -85px;
+}
+.ct3_2{
+    width: 1200px;
+    height: 390px;
+    position: absolute;
+    top: 190px;
+    left: 50%;
+    margin-left: -600px;
+    box-shadow: 0 0 25px #999;
+    border-radius: 5px;
+}
+.wd_contert4{
+    width: 100%;
+    height: 580px;
+    position: relative;
+    position: absolute;
+    top: 3060px;
+}
+.ct4_1{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -85px;
+}
+.ct4_2{
+    width: 1200px;
+    height: 390px;
+    position: relative;
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    margin-left: -600px;
+    background: rgb(36,41,54);
+    box-shadow: 0 0 25px #999;
+    border-radius: 5px;
+    overflow: hidden;
+
+}
+#lunbo{
+    position: absolute;
+    width: 8400px;
+    transition: all 1s;
+}
+
+.ct4_3{
+    position: absolute;
+    left: 0;
+    top: 50%;
+
+}
+.ct4_box{
+    width: 30px;
+    height: 80px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    line-height: 80px;
+    cursor: pointer;
+    background: rgba(228, 0, 119,0.2);
+    margin-top: -40px;
+    z-index: 99;
+}
+.ct4_4{
+    position: absolute;
+    right: 0;
+    top: 50%;
+}
+
+.ct4_2 ul li {
+    float: left;
+}
+.ct4_2 ul li p{
+    width: 400px;
+    height: 330px;
+    overflow: hidden;
+
+}
+.ct4_2 ul li p img{
+    width: 400px;
+    height: 330px;
+}
+.ct4_2 ul li p img:hover{
+    /*width: 500px;*/
+    /*height: 400px;*/
+    transition: ease-out 1s;
+    transform: scale(1.6);
+}
+.ct4_2 ul li ul li{
+    font-size: 12px;
+    box-sizing: border-box;
+    padding-left: 15px;
+    padding-top: 6px;
+    line-height: 10px;
+    color: rgb(134,134,134);
+}
+.ct4_2 ul li ul li a{
+    font-size: 14px;
+    color: rgb(255,255,255);
+}
+.ct4_2 ul li ul li a:hover{
+     color: rgb(228, 0, 119)
+}
+.ct4_2>ul{
+   float: left;
+}
+
+.wd_footer{
+    position: absolute;
+    top: 3800px;
+}
+
+
+.newtop1{
+    width: 55px;
+    height: 55px;
+    background: rgba(44,44, 44,0.8);
+    position: absolute;
+    bottom: 500px;
+    right: 100px;
+    z-index: 100;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 55px;
+    font-size: 50px;
+    color: rgb(176,176,176);
+    cursor: pointer;
+}
+.newtop1:hover{
+    color: rgb(226, 0, 119);
+}
+.fixed{
+    position: fixed;
+    bottom: 100px;
+}

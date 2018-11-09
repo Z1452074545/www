@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/common.css"/>
+    <link rel="stylesheet" href="css/header.css"/>
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/move.js"></script>
+
+</head>
+<body>
+<!--头部导航-->
+<div class="head">
+    <div class="head-nav">
+        <div class="logo">
+            <a href="index.html">
+                <a href="index.html">
+                <img src="./images/logo.png"/>
+                </a>
+            </a>
+        </div>
+        <ul id="sy">
+            <li><h3><a href="index.html">首页</a></h3>
+
+                <p  class="show"></p>
+            </li>
+            <li>
+                <h3>小鸟掌学</h3>
+                <img src="./images/nav_xiajiantou.png" alt=""/>
+
+                <p ></p>
+                <ul id="xl1">
+                    <li><a href="aboutxiaoniao.html">小鸟掌学主页<span>&gt</span></a></li>
+                    <li onclick="javascript:window.open('aboutxiaoniao.html#1');">小鸟掌学概述<span>&gt</span></li>
+                    <li onclick="javascript:window.open('aboutxiaoniao.html#2');">对企业的价值<span>&gt</span></li>
+                    <li onclick="javascript:window.open('aboutxiaoniao.html#3');">小鸟掌云<span>&gt</span></li>
+                    <li>微课联盟<span>&gt</span></li>
+                    <li onclick="javascript:window.open('aboutxiaoniao.html#4');">App下载<span>&gt</span></li>
+                </ul>
+            </li>
+            <li>
+                <!--<h3><a href="list.html">小鸟动态</a></h3>-->
+                <h3 onclick="javascript:window.open('list.html?type=xiaoniaoNews');">小鸟动态</h3>
+                <p></p>
+            </li>
+            <li>
+                <h3>企业文化</h3>
+                <img src="./images/nav_xiajiantou.png" alt=""/>
+
+                <p></p>
+                <ul id="xl2">
+                    <li onclick="javascript:window.open('article.html?type=companyIdea');">公司理念<span>&gt</span></li>
+                    <li onclick="javascript:window.open('article.html?type=companyCulture');">公司文化<span>&gt</span></li>
+                    <li onclick="javascript:window.open('article.html?type=companyEnvironment');">公司氛围<span>&gt</span></li>
+                </ul>
+            </li>
+            <li>
+                <h3>人力资源</h3>
+                <img src="./images/nav_xiajiantou.png" alt=""/>
+
+                <p></p>
+                <ul id="xl3">
+                    <li onclick="javascript:window.open('article.html?type=talents');">人才理念<span>&gt</span></li>
+                    <li onclick="javascript:window.open('article.html?type=team');">团队介绍<span>&gt</span></li>
+                    <li onclick="javascript:window.open('article.html?type=joinUs');">招聘信息<span>&gt</span></li>
+                </ul>
+            </li>
+            <!--<li><h3><a href="article.html">联系我们</a></h3>-->
+            <li><h3 onclick="javascript:window.open('article.html?type=telUs');">联系我们</h3>
+
+                <p></p></li>
+        </ul>
+    </div>
+</div>
+<script>
+    $(function () {
+        $("#sy li").hover(function () {
+            $(this).find("ul").slideDown(400,"elasticOut")
+        }, function () {
+            $(this).find("ul").stop().slideUp(400)
+        }).click(function () {
+            $(this).find("p").addClass("show").end().siblings().find("p").removeClass("show")
+        })
+
+
+        $("#xl1 li").hover(function () {
+            $(this).css({"background": "#3498DB"})
+            $(this).stop().animate({"padding-left": "50px"})
+            $(this).find("span").stop().fadeIn(100)
+        }, function () {
+            $(this).find("span").stop().fadeOut(100)
+            $(this).css({"background": "#36264a"})
+            $(this).stop().animate({"padding-left": "30px"})
+        })
+        $("#xl2 li").hover(function () {
+            $(this).find("span").stop().fadeIn(100)
+            $(this).css({"background": "#3498DB"})
+            $(this).stop().animate({"padding-left": "50px"})
+        }, function () {
+            $(this).find("span").stop().fadeOut(100)
+            $(this).css({"background": "#36264a"})
+            $(this).stop().animate({"padding-left": "30px"})
+        })
+        $("#xl3 li").hover(function () {
+            $(this).find("span").stop().fadeIn(100)
+            $(this).css({"background": "#3498DB"})
+            $(this).stop().animate({"padding-left": "50px"})
+        }, function () {
+            $(this).find("span").stop().fadeOut(100)
+            $(this).css({"background": "#36264a"})
+            $(this).stop().animate({"padding-left": "30px"})
+        })
+
+//        GLOBLE.welcomeOver="";
+        var mainHash=window.location.hash.substring(1);
+        if(mainHash){
+            if(mainHash==0||mainHash==1||mainHash==2||mainHash==3||mainHash==4){
+                $(".welcome_wrap").slideUp(0,function(){
+                     GLOBLE.welcomeOver=true;
+                });
+                mainSlideIndex=mainHash;
+                mainSlideGo();
+                gaishuMove();
+                window.location.hash="";
+            }
+        }
+
+    })
+
+</script>
+</body>
+</html>

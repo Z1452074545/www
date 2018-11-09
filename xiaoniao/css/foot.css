@@ -1,0 +1,46 @@
+.footer_wrap {
+    height: 348px;
+    min-width: 1100px;
+    background: url(../images/yinyue_bg.jpg);
+}
+.footer {
+    width: 1100px;
+    margin: 0 auto;
+}
+.music {
+    padding: 116px 0 0 276px;
+    height: 67px;
+}
+.music span {
+    float: left;
+    cursor: pointer;
+    width: 57px;
+    height: 57px;
+    background: url(../images/yinyue_duo.png) no-repeat;
+    margin-right: 26px;
+}
+.footer .shenmin {
+    border-top: 2px #9890a2 dashed;
+    text-align: center;
+    line-height: 65px;
+    margin-top: 79px;
+    color: #fff;
+    cursor: pointer;
+}
+.map_topimg img {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.music>span:hover{
+    animation: cz 0.5s 0s linear;
+    background-position: 0 -57px;
+
+}
+@keyframes cz {
+    20%{transform: scaleY(0.8) scaleX(1.2);}
+    40%{transform: scaleY(1.2) scaleX(0.8);}
+    60%{transform: scaleY(0.9) scaleX(1.1);}
+    80%{transform: scaleY(1.1) scaleX(0.9);}
+    100%{transform: scaleY(1) scaleX(1);}
+}

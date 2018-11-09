@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>AJAX</title>
+<style>
+*{
+	margin:0;
+	padding:0;
+}
+body{
+	padding:40px;
+}
+input{
+	border:1px solid #a9a9a9;
+	height:34px;
+	line-height:34px;
+	width:300px;
+	margin-bottom:20px;
+	padding-left:5px;
+}
+.myBtn{
+	background:#3498db;
+	color:#fff;
+	font-size:14px;
+	text-align:center;
+	width:100px;
+	height:36px;
+	line-height:34px;
+	border:none 0;
+	cursor:pointer;
+	margin-left:20px;
+}
+</style>
+</head>
+
+<body>
+	表单：数据的提交</br>
+    	action : 数据提交的地址，默认是当前页面</br>
+        method : 数据提交的方式，默认是get方式</br>
+        	1.get</br>
+            	把数据名称和数据值用=连接，如果有多个的话，那么他会把多个数据组合用&进行连接，然后把数据放到url?后面传到指定页面</br>
+            2.post</br>
+        enctype : 提交的数据格式，默认application/x-www-form-urlencoded</br></br>
+    <form action="links/1.post.php" method="post">
+    	<input type="text" name="username" placeholder="输入名字" />
+        <input type="text" name="age" placeholder="输入年龄" />
+        <input type="submit"  class="myBtn" value="提交" />
+    </form>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>北京卓新思创科技有限公司</title>
+   <!--  <style>
+        .footer_wrap {
+            height: 348px;
+            min-width: 1100px;
+            background: url(images/yinyue_bg.jpg);
+        }
+        .footer {
+            width: 1100px;
+            margin: 0 auto;
+        }
+        .music {
+            padding: 116px 0 0 276px;
+            height: 67px;
+        }
+        .music span {
+            float: left;
+            cursor: pointer;
+            width: 57px;
+            height: 57px;
+            background: url(images/yinyue_duo.png) no-repeat;
+            margin-right: 26px;
+        }
+        .footer .shenmin {
+            border-top: 2px #9890a2 dashed;
+            text-align: center;
+            line-height: 65px;
+            margin-top: 79px;
+            color: #fff;
+            cursor: pointer;
+        }
+        .map_topimg img {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .music>span:hover{
+            animation: cz 0.5s 0s linear;
+            background-position: 0 -57px;
+
+        }
+        @keyframes cz {
+            20%{transform: scaleY(0.8) scaleX(1.2);}
+            40%{transform: scaleY(1.2) scaleX(0.8);}
+            60%{transform: scaleY(0.9) scaleX(1.1);}
+            80%{transform: scaleY(1.1) scaleX(0.9);}
+            100%{transform: scaleY(1) scaleX(1);}
+        }
+    </style>-->
+    <link rel="stylesheet" href="css/common.css"/>
+    <link rel="stylesheet" href="css/foot.css"/>
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/move.js"></script>
+</head>
+<body>
+<div id="footer">
+    <div class="footer_wrap">
+        <div class="footer">
+            <audio class="music1" src="music/sound00.mp3"></audio>
+            <div class="music">
+
+                <span></span>
+                <span style="background-image:url(images/yinyue_lai.png)"></span>
+                <span style="background-image:url(images/yinyue_mi.png)"></span>
+                <span style="background-image:url(images/yinyue_fa.png)"></span>
+                <span style="background-image:url(images/yinyue_suo.png)"></span>
+                <span style="background-image:url(images/yinyue_la.png)"></span>
+                <span style="background-image:url(images/yinyue_xi.png)"></span>
+            </div>
+            <div class="shenmin" id="beiaishenmin">蜀ICP备16002451号</div>
+        </div>
+    </div>
+</div>
+<script>
+ $(function(){
+     $(".music span").click(function(){
+         var num=$(this).index();
+         $(".music1").attr('src','music/sound0'+num+'.mp3')
+         $(".music1").trigger("play")
+     })
+ })
+</script>
+</body>
+</html>

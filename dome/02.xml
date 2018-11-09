@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--不能在头部申明之前写注释-->
+
+<!--xml格式  必须有根元素标签-->
+<!--自定义标签 -->
+<!--规则：不能以数组开头  不能含有特殊字符  必须有结束标签-->
+
+<List>
+    <item>
+        <imgUrl>images/detail02.jpg</imgUrl>
+        <nowPrice>&lt;11.00</nowPrice>
+        <oldPrice>1300.00</oldPrice>
+    </item>
+    <item>
+        <imgUrl>images/detail02.jpg</imgUrl>
+        <nowPrice>11.00</nowPrice>
+        <oldPrice>1300.00</oldPrice>
+    </item>
+    <item>
+        <imgUrl>images/detail02.jpg</imgUrl>
+        <nowPrice>11.00</nowPrice>
+        <oldPrice>1300.00</oldPrice>
+    </item>
+</List>

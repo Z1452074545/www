@@ -1,0 +1,168 @@
+.sp_top{
+    position: absolute;
+    top: 687px;
+}
+.regsiter{
+    position: absolute;
+    top: 70px;
+    width: 100%;
+    height:543px;
+    background: url("../imgs/noLogin.png");
+    background-size: 100% 543px;
+}
+.shade{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 985px;
+    background: rgba(0,0,0,0.5);
+    z-index: 1;
+    display: none;
+}
+.myReg{
+    width: 260px;
+    height: 60px;
+    background: rgb(231,0,118);
+    position: absolute;
+    left: 50%;
+    top: 410px;
+    margin-left: -130px;
+    z-index: 2;
+    text-align: center;
+    line-height: 60px;
+    cursor: pointer;
+}
+.myReg p{
+     font-size: 24px;
+    color: rgb(255,255,255);
+}
+.login{
+    width: 490px;
+    height: 460px;
+    background: rgb(255,255,255);
+    position: absolute;
+    top: 220px;
+    left: 50%;
+    margin-left: -230px;
+    z-index: 3;
+    display: none;
+}
+.login_1{
+    width: 100%;
+    height: 90px;
+    background: rgb(241,241,241);
+    box-sizing: border-box;
+    border-bottom: 1px solid rgb(218,218,218);
+    position: relative;
+}
+.login_2{
+    width: 100%;
+    height: 570px;
+}
+.btn_x{
+    position: absolute;
+    right: 0;
+    top: 5px;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    color: rgb(231,0,118);
+    font-weight: bold;
+    border-left: 1px solid grey;
+    padding-left: 10px;
+    line-height: 20px;
+}
+.log1_2 ul li{
+    width: 245px;
+    height: 40px;
+    float: left;
+
+    text-align: center;
+    line-height: 30px;
+    box-sizing: border-box;
+    cursor: pointer;
+    color: rgb(148,148,148);
+}
+.log1_2 ul li.log_li_bor{
+    border-bottom: 2px solid rgb(231,0,118);
+    color: rgb(231,0,118);
+}
+.login_2 div{
+    width: 277px;
+    height: 37px;
+    box-sizing: border-box;
+    border: 1px solid grey;
+    margin: 25px auto 0 auto;
+}
+.login_2 div input{
+    border: 0 none;
+    outline: none;
+    margin-top: 9px;
+    margin-left: 40px;
+    width: 220px;
+    color: grey;
+}
+.login_2 div input.black{
+ color: black;
+}
+.divlog2_1{
+    position: relative;
+}
+.divlog2_1 p{
+    position: absolute;
+
+}
+.sp_tijiao{
+    background: rgba(231,0,118,0.8);
+    text-align: center;
+    line-height: 37px;
+    cursor: pointer;
+    color: white;
+}
+.sp_fanhui{
+    background: rgba(231,0,118,0.8);
+    text-align: center;
+    line-height: 37px;
+    cursor: pointer;
+    color: white;
+}
+.False{
+    width: 277px;
+    height:50px;
+    background: rgba(231,0,118,0.8);
+    position: absolute;
+    top: 620px;
+    z-index: 30;
+    left: 50%;
+    margin-left: -128px;
+    display: none;
+    border-radius: 20px;
+    box-sizing: border-box;
+    padding: 20px;
+    color: white;
+}
+.Frue{
+    width: 300px;
+    height: 200px;
+    background: red;
+    position: absolute;
+    top: 500px;
+    z-index: 30;
+    left: 50%;
+    margin-left: -150px;
+    display: none;
+    border-radius: 20px;
+    box-sizing: border-box;
+    padding: 20px;
+    font-size: 18px;
+}
+.False input{
+    float: right;
+    background: rgba(231,0,118,0.1);
+    border: 0 none;
+    outline: none;
+    color: white;
+    cursor: pointer;
+
+}

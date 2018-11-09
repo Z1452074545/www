@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>头部导航</title>
+    <link rel="stylesheet" href="css/common.css"/>
+    <link rel="stylesheet" href="css/header.css"/>
+    <script src="js/jquery-1.8.3.min.js"></script>
+</head>
+<body>
+<!--头部导航-->
+<div class="header">
+    <!-- 头部logo-->
+   <div class="loge">
+       <a href="index.html"><img src="imgs/header_loge.png"/></a>
+   </div>
+    <!-- 头部右侧文字导航-->
+    <div class="cont" id="cont">
+        <ul>
+            <li ><a href="index.html">首页</a><p class="header_now"></p><br/><a href="index.html"><span>首页</span></a></li>
+            <li ><a href="cpzx.html">产品中心</a><p></p><br/><a href="cpzx.html"><span>产品中心</span></a></li>
+            <li><a href="javascript:;">技术支持</a><p></p><br/><a href=""><span>技术支持</span></a></li>
+            <li id="yc_li">
+                <a href="javascript:;">
+                    关于我们&nbsp;v
+                </a>
+                <p></p>
+                <br/>
+                <a href="javsscript:;">
+                    <span>关于我们&nbsp;v</span>
+                </a>
+            </li>
+            <li><a href="javascript:;">合作伙伴</a><p></p><br/><a href=""><span>合作伙伴</span></a></li>
+            <li><a href="javascript:;">联系</a><p></p><br/><a href=""><span>联系</span></a></li>
+            <li><a href="javascript:;">返回UEmo</a><p></p><br/><a href=""><span>返回UEmo</span></a></li>
+        </ul>
+        <!-- 导航隐藏部分-->
+        <dl id="cont_yc" style="display: none">
+            <dd><a href="javascript:;">关于我们</a></dd>
+            <dd><a href="list.html">新闻中心</a></dd>
+            <dd><a href="javascript:;">团队</a></dd>
+        </dl>
+    </div>
+</div>
+<script>
+  $(function(){
+//      鼠标点击当前 出现蓝色提示条
+      // 鼠标点击 隐藏显示
+      (function(){
+          $("#cont ul li").click(function(){
+              var index=$(this).index();
+              $("#cont ul li p").removeClass("header_now").eq(index).addClass("header_now");
+          })
+          $("#yc_li").click(function(){
+              $("#cont_yc").slideToggle(300)
+          })
+      })()
+  })
+</script>
+</body>
+</html>

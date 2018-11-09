@@ -1,0 +1,111 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>AJAX</title>
+<style>
+*{
+	margin:0;
+	padding:0;
+}
+.myBtn{
+	background:#3498db;
+	color:#fff;
+	font-size:14px;
+	text-align:center;
+	width:100px;
+	height:36px;
+	line-height:34px;
+	border:none 0;
+	cursor:pointer;
+	margin-left:37px;
+	margin-bottom:20px;
+}
+#content{
+	overflow:hidden;
+}
+img{
+	border:none;
+	height:200px;
+}
+.box{
+	width:300px;
+	float:left;
+	margin:10px 0 0 10px;
+	overflow:hidden;
+}
+.box p{
+	line-height:34px;
+	text-align:center;
+}
+</style>
+
+<script src="js/ajax.js"></script>
+<script>
+/*
+	要求：实现点击下一页请求图片信息。
+	请url：links/getImages.php
+	参数：page,起始0。
+	按照下面的方法配置请求地址即可。
+*/
+window.onload = function() {
+	
+	var oBtn = document.getElementById('btn');
+	var oContent = document.getElementById('content');
+	var loading = false;
+	var page = 0;
+	//加载第一页
+	loadPage();
+	
+	//点击的时候加载下一页
+	oBtn.onclick = function() {
+		if(!loading){
+			loadPage();
+		}
+	}
+	function loadPage(){
+		loading = true;
+		oBtn.value = "加载中...";
+		//开始ajax请求
+		ajax('get','links/getImages.php?page='+page,'',function(data) {
+			//将返回的数据变为json对象。
+			var data = JSON.parse( data );
+			//没有返回错误才开始加载数据
+			if(!data.err){
+				var str = "";
+				for(var i=0; i<data.length; i++){
+					str += '<div class="box"><img src="'+ data[i].src +'" />'
+						+ '<p>'+ data[i].name +'</p></div>';
+				}
+				oContent.innerHTML = str;
+
+
+//				var oDiv = document.createElement("div");
+//				oDiv.innerHTML = str;
+//				oContent.appendChild(oDiv);
+				
+				oBtn.value = "加载下一页";
+				page++;
+				loading = false;
+				
+			}else{
+				oBtn.value = data.err;
+				
+			}
+
+			
+		});
+	}
+	
+	
+	
+}
+</script>
+</head>
+
+<body>
+	<div id="content"></div>
+	<input type="button" value="加载中..." id="btn" class="myBtn" />
+    
+</body>
+</html>

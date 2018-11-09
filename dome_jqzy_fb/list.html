@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/common.css"/>
+    <link rel="stylesheet" href="css/animate.css"/>
+    <link rel="stylesheet" href="css/list.css"/>
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/move.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/list.js"></script>
+</head>
+<body>
+<!--//头部导航-->
+<div id="header"></div>
+<!--新闻中心-->
+<div class="content_wrap">
+    <h1 class="title_big">新闻中心</h1>
+    <h2>About Us</h2>
+    <!--<img src="images/three_points01.png" />-->
+    <h1 class="title_list">列表<span class="pen"></span></h1>
+
+    <div class="list_content" id="articleList">
+
+        <!--模板-->
+        <div id="itemHtml" style="display:none;">
+            <div class="content_one" articleid="$articleId$">
+                <div class="img_wrap"><img src="$articleCover$"></div>
+                <div class="content_text">
+                    <div class="title_small">$articleTitle$</div>
+                    <div class="date">$updateTime$</div>
+                    <p>$describe$</p>
+                </div>
+                <!--<img class="list_img_over_xiaojiantou" src="images/list_img_over_xiaojiantou.png">-->
+
+            </div>
+        </div>
+
+
+
+    </div>
+
+    <!--<img class="gomore" style="margin:30px auto 0" src="images/list_gomore_bg.jpg" />-->
+    <div class="list_more" id="listMore">v</div>
+
+</div>
+<!--内容下面和底部相接的异形-->
+<div class="link_footer_img">
+</div>
+<!--底部-->
+<div id="footer"></div>
+
+<!--返回顶部-->
+<div class="fixed_tip" id="scrollTop_wrap">
+    <div class="scroll_top" id="scrollTop"></div>
+    <div class="fixed_contactus " id="ceshi"></div>
+</div>
+</body>
+</html>

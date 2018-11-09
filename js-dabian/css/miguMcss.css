@@ -1,0 +1,754 @@
+/*去除浏览器默认样式*/
+a {
+    text-decoration: none;
+}
+
+/*设置body的背景 背景不跟随滚动条移动*/
+
+body {
+    background: url("../imgs/bg.jpg") repeat-y;
+    background-size: 100% 642px;
+    background-attachment: fixed;
+    height: 100%;
+    position: relative;
+}
+
+/*设置整个页面的字体*/
+html, body {
+    font-family: "微软雅黑";
+}
+
+/*头部导航 样式*/
+.header_top {
+    width: 100%;
+    height: 70px;
+    background: rgb(7, 7, 7);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/*头部导航-版心*/
+.nav {
+    width: 1200px;
+    height: 70px;
+    background: rgb(7, 7, 7);
+    margin: auto;
+    position: relative;
+}
+
+/*导航左侧loge*/
+.nav_loge {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/*导航中部 文字导航*/
+.nav_center {
+    position: absolute;
+    top: 0;
+    left: 140px;
+
+}
+
+.nav_center ul li {
+    float: left;
+    line-height: 70px;
+    height: 70px;
+    margin-left: 60px;
+    box-sizing: border-box;
+}
+
+.nav_border {
+    border-bottom: 2px solid rgb(226, 0, 119);
+}
+
+.nav_center ul li a {
+    font-size: 20px;
+    color: rgb(225, 225, 225);
+    line-height: 70px;
+}
+
+.nav_center ul li a:hover {
+    color: rgb(226, 0, 119);
+}
+
+/*导航右侧 */
+.nav_right {
+    width: 220px;
+    height: 70px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.div1 {
+    width: 20px;
+    height: 20px;
+    background: url("../imgs/nav_r_1.png");
+    cursor: pointer;
+    float: left;
+    margin-top: 25px;
+}
+
+.div1:hover {
+    background: url("../imgs/nav_r_2.png");
+}
+
+.nav_right ul li {
+    float: left;
+    line-height: 70px;
+    margin-left: 20px;
+}
+
+.nav_right ul {
+    float: left;
+}
+
+.nav_right ul li a {
+    color: rgb(225, 225, 225);
+}
+
+.nav_right ul li a:hover {
+    color: rgb(226, 0, 119);
+}
+
+.div2 {
+    width: 53px;
+    height: 47px;
+    float: right;
+    margin-top: 10px;
+
+}
+
+/*头部导航 隐藏部分*/
+.nav_yc {
+    width: 100%;
+    height: 50px;
+    background: rgba(7, 7, 7, 0.8);
+    display: none;
+    z-index: 10;
+    position: absolute;
+    top: 70px;
+
+}
+
+.div3 {
+    width: 1200px;
+    height: 50px;
+    margin: auto;
+    box-sizing: border-box;
+    padding-left: 180px;
+}
+
+.div3 ul {
+    display: none;
+}
+
+.div3 ul li {
+    float: left;
+    margin-left: 20px;
+    line-height: 50px;
+}
+
+.div3 ul li a {
+    color: rgb(225, 225, 225);
+}
+
+.div3 ul li a:hover {
+    color: rgb(226, 0, 119);
+}
+
+#ul {
+    list-style: none;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -77px;
+}
+
+#ul li {
+    float: left;
+    height: 30px;
+}
+
+#ul li a {
+    display: block;
+    width: 12px;
+    height: 4px;
+    border-radius: 10px;
+    background-color: rgb(153, 153, 153);
+    margin-left: 5px;
+    opacity: 0.6;
+}
+
+#ul li a.active {
+    background-color: rgb(226, 0, 119);
+    width: 30px;
+    height: 4px;
+}
+
+.inner {
+    width: 19030px;
+    height: 600px;
+    position: absolute;
+}
+
+.inner img {
+    display: block;
+    float: left;
+    width: 1903px;
+    height: 600px;
+}
+
+.pic {
+    height: 600px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    position: absolute;
+    top: 70px;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 270px;
+    opacity: 0.6;
+    width: 60px;
+    height: 100px;
+    font-size: 30px;
+    /*font-weight: bold;*/
+    color: rgba(255, 255, 255,0.4);
+    background: rgba(7, 7, 7, 0.4);
+    border: 0 none;
+    outline: none;
+    cursor: pointer;
+}
+
+.next {
+    right: 0;
+}
+
+.yd_w {
+    width: 100%;
+    height: 260px;
+    background: rgb(255, 255, 255);
+    position: absolute;
+    top: 670px;
+}
+
+.yd_t {
+    width: 100%;
+    height: 620px;
+
+}
+
+.contert1 {
+    width: 1200px;
+    height: 500px;
+    position: absolute;
+    top: 160px;
+    left: 50%;
+    margin-left: -600px;
+    position: relative;
+}
+
+.contert1:hover .ct1_box {
+    display: block;
+}
+
+.ct1_img {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -127px;
+}
+
+.ct2 {
+    width: 1200px;
+    height: 390px;
+    background: rgb(34, 34, 34);
+    position: relative;
+    position: absolute;
+    bottom: 0px;
+    overflow: hidden;
+}
+
+.ct2 ul {
+    position: absolute;
+}
+
+#wf_ct3 ul {
+    display: none;
+    float: left;
+}
+
+.ct2 ul li {
+    width: 300px;
+    height: 390px;
+    float: left;
+}
+
+.ct2 ul li:nth-child(2n) {
+    background: rgb(59, 59, 59);
+}
+
+.ct2 ul li p {
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.ct2 ul li p img {
+    width: 300px;
+    height: 300px;
+}
+
+.ct2 ul li p img:hover {
+    /*width: 400px;*/
+    /*height: 400px;*/
+    transition: all 1s;
+    /*transform: scaleX(1.0);*/
+    /*transform: scaleY(1.5);*/
+    transform: scale(1.6);
+}
+
+.ct2 ul li span dl dd {
+    cursor: pointer;
+}
+
+.ct2 ul li span dl dd:nth-child(1) {
+    font-size: 16px;
+    font-weight: bold;
+    color: rgb(230, 230, 230);
+    margin-left: 15px;
+    line-height: 21px;
+    margin-top: 20px;
+}
+
+.ct2 ul li span dl dd:nth-child(1):hover {
+    color: rgb(226, 0, 119);
+}
+
+.ct2 ul li span dl dd:nth-child(2) {
+    font-size: 14px;
+    color: rgb(142, 142, 142);
+    margin-left: 15px;
+    line-height: 21px;
+}
+
+.ct2 ul li span dl dd:nth-child(2):hover {
+    color: rgb(226, 0, 119);
+}
+
+.ct1_box {
+    width: 30px;
+    height: 80px;
+    background: rgb(226, 0, 119);
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 80px;
+    cursor: pointer;
+    display: none;
+}
+
+.ct1_left {
+    position: absolute;
+    left: -30px;
+    top: 50%;
+    margin-top: -25px;
+}
+
+.ct1_right {
+    position: absolute;
+    right: -30px;
+    top: 50%;
+    margin-top: -25px;
+}
+
+.yd_t1 {
+    width: 100%;
+    height: 80px;
+
+}
+
+.yd_w1 {
+    width: 100%;
+    height: 510px;
+    background: rgb(255, 255, 255);
+    position: absolute;
+    top: 1530px;
+    z-index: -1;
+}
+
+.all {
+    width: 1200px;
+    height: 500px;
+    margin: 90px auto;
+    position: relative;
+}
+
+.screen {
+    width: 1200px;
+    height: 390px;
+    overflow: hidden;
+    position: relative;
+}
+
+.screen li {
+    width: 1200px;
+    height: 390px;
+    overflow: hidden;
+    float: left;
+}
+
+.screen ul {
+    position: absolute;
+    left: 0;
+    top: 0px;
+    width: 6000px;
+}
+
+.all ol {
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    margin-left: -80px;
+    line-height: 20px;
+    text-align: center;
+}
+
+.all ol li {
+    float: left;
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    border: 1px solid #ccc;
+    margin-left: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-family: "Consolas";
+}
+
+.all ol li.current {
+    background: yellow;
+}
+
+#arr {
+    display: none;
+}
+
+#arr span {
+    width: 30px;
+    height: 60px;
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    margin-top: -100px;
+    background: #000;
+    cursor: pointer;
+    line-height: 60px;
+    text-align: center;
+    font-weight: bold;
+    font-family: '黑体';
+    font-size: 30px;
+    color: #fff;
+    opacity: 0.3;
+    border: 1px solid #fff;
+}
+
+#arr #right {
+    right: 5px;
+    left: auto;
+}
+
+#arr1 {
+    display: none;
+}
+
+#arr1 span {
+    width: 30px;
+    height: 60px;
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    margin-top: -100px;
+    background: #000;
+    cursor: pointer;
+    line-height: 60px;
+    text-align: center;
+    font-weight: bold;
+    font-family: '黑体';
+    font-size: 30px;
+    color: #fff;
+    opacity: 0.3;
+    border: 1px solid #fff;
+}
+
+#arr1 #right1 {
+    right: 5px;
+    left: auto;
+}
+
+.ct2_img {
+    margin-top: -100px;
+}
+
+.screen ul li {
+    width: 1200px;
+    height: 390px;
+    cursor: pointer;
+}
+
+.screen ul li dl {
+    background: rgb(34, 34, 34);
+    width: 300px;
+    height: 390px;
+    float: left;
+}
+
+.screen ul li dl:nth-child(odd) {
+    background: rgb(59, 59, 59);
+}
+
+.screen ul li dl dd img {
+    width: 300px;
+    height: 300px;
+}
+
+.screen ul li dl dd img:hover {
+    /*width: 400px;*/
+    /*height: 400px;*/
+    transition: all 1s;
+    /*transform: scaleX(1.0);*/
+    /*transform: scaleY(1.6);*/
+    transform: scale(1.5);
+}
+
+.screen ul li dl dd p:nth-child(1) {
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+}
+
+.screen ul li dl dd p span {
+    color: rgb(142, 142, 142);
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.screen ul li dl dd p:nth-child(2) {
+    margin-top: 10px;
+}
+
+.screen ul li dl dd p span:hover {
+    color: rgb(226, 0, 119);
+}
+
+.screen ul li dl dd p span:nth-child(1) {
+    font-size: 16px;
+    color: rgb(230, 230, 230);
+    font-weight: bold;
+    line-height: 30px;
+}
+
+.screen ul li dl dd p span:nth-child(1):hover {
+    color: rgb(226, 0, 119);
+}
+
+.screen ul li dl dd p span:nth-child(2) {
+    font-size: 14px;
+    color: rgb(142, 142, 142);
+    line-height: 20px;
+
+}
+
+.yd_w2 {
+    width: 100%;
+    height: 640px;
+    background: rgb(255, 255, 255);
+    position: absolute;
+    left: 0;
+    top: 2500px;
+
+}
+
+#contert5 {
+    margin-top: 220px;
+}
+
+.footer {
+    width: 100%;
+    height: 325px;
+    background: rgb(34, 34, 34);
+    position: absolute;
+    left: 0;
+    top: 3137px;
+    /*bottom: 0;*/
+    /*margin-top: -300px;*/
+
+}
+
+.footer_con {
+    width: 1200px;
+    height: 325px;
+    background: rgb(34, 34, 34);
+    margin: auto;
+    position: relative;
+}
+
+.ft_1 {
+    width: 1200px;
+    height: 135px;
+    /*background: navy;*/
+    position: absolute;
+    top: 55px;
+    left: 0;
+}
+
+.ft_1 div {
+    height: 135px;
+    box-sizing: border-box;
+
+}
+
+.ft_1_1 {
+    width: 200px;
+    float: left;
+}
+
+.ft_1_2 {
+    width: 220px;
+    /*margin: auto;*/
+    float: left;
+    margin-left: 290px;
+}
+
+.ft_1_3 {
+    width: 200px;
+    float: right;
+}
+
+.ft_1 div p {
+    font-size: 18px;
+    color: rgb(153, 153, 153);
+}
+
+.ft_1 div ul li {
+    float: left;
+    margin-right: 15px;
+    font-size: 12px;
+    color: rgb(153, 153, 153);
+    line-height: 30px;
+}
+
+.ft_1 div ul li a {
+    color: rgb(153, 153, 153);
+}
+
+.ft_1 div ul li a:hover {
+    color: rgb(226, 0, 119);
+}
+
+.ft_1_3 dl dd {
+    width: 80px;
+    height: 115px;
+    float: left;
+}
+
+.ft_1_3 dl dd:nth-child(2) {
+    float: right;
+}
+
+.ft_1_3 dl dd span {
+    font-size: 12px;
+    color: rgb(153, 153, 153);
+    height: 30px;
+    line-height: 30px;
+}
+
+.ft_1_3 dl dd img {
+    width: 70px;
+    height: 70px;
+}
+
+.ft_2 {
+    width: 1200px;
+    height: 100px;
+    position: absolute;
+    bottom: 10px;
+
+}
+
+.ft2_1 {
+    width: 550px;
+    height: 20px;
+    text-align: center;
+    margin-left: 300px;
+}
+
+.ft2_1 ul li {
+    float: left;
+    margin-left: 20px;
+    color: rgb(153, 153, 153);
+}
+
+.ft2_1 ul li a {
+    color: rgb(153, 153, 153);
+    font-size: 12px;
+}
+
+.ft2_1 ul li a:hover {
+    color: rgb(226, 0, 119);
+}
+.ft2_2 {
+    width: 700px;
+    height: 20px;
+    margin-left: 220px;
+    margin-top: 10px;
+}
+.ft2_2 ul li {
+    float: left;
+    font-size: 12px;
+    color: rgb(153, 153, 153);
+    margin-left: 20px;
+}
+.ft2_3 {
+    width: 260px;
+    height: 20px;
+    text-align: center;
+    margin-left: 440px;
+    margin-top: 5px;
+}
+.ft2_3 p {
+    color: rgb(153, 153, 153);
+    font-size: 12px;
+}
+.newtop{
+    width: 55px;
+    height: 55px;
+    background: rgba(44,44, 44,0.8);
+    position: absolute;
+    bottom: 50px;
+    right: 100px;
+    z-index: 10;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 55px;
+    font-size: 50px;
+    color: rgb(176,176,176);
+    cursor: pointer;
+}
+.newtop:hover{
+    color: rgb(226, 0, 119);
+}
+.fixed{
+    position: fixed;
+    bottom: 100px;
+}

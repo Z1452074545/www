@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 15px 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <table>
+        <thead>
+            <tr><th>序号</th><th>图片地址</th><th>现价</th><th>原价</th></tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td colspan="4" align="center">正在加载中...</td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        window.onload = function(){
+            var xhr = new XMLHttpRequest();
+            xhr.open('get','02.xml.php');
+            xhr.send(null);
+            xhr.onreadystatechange = function(){
+                if(xhr.readyState == 4 && xhr.status == 200){
+                    /*返回内容必须是 xml 并且字符格式也是xml格式的*/
+                    var xmlDom = xhr.responseXML;
+                    /*渲染*/
+                    var items = xmlDom.querySelectorAll('item');
+
+                    var html = "";
+                    for(var i = 0 ; i < items.length ; i ++){
+                        var item = items[i];
+                        html += '<tr>' +
+                                '<td>'+(i+1)+'</td>' +
+                                '<td>'+item.querySelector('imgUrl').innerHTML+'</td>' +
+                                '<td>'+item.querySelector('nowPrice').innerHTML+'</td>' +
+                                '<td>'+item.querySelector('oldPrice').innerHTML+'</td>' +
+                                '</tr>'
+                    }
+                    document.querySelector('tbody').innerHTML = html;
+                }
+            }
+        }
+    </script>
+</body>
+</html>

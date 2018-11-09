@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			.myBtn {
+				background: #3498db;
+				color: #fff;
+				font-size: 14px;
+				text-align: center;
+				width: 100px;
+				height: 36px;
+				line-height: 34px;
+				border: none 0;
+				cursor: pointer;
+			}
+		</style>
+	</head>
+
+	<body>
+		<input type="button" value="按钮" id="btn" class="myBtn" />
+
+		<script>
+			var oBtn = document.getElementById('btn');
+			oBtn.onclick = function() {
+				var xhr = new XMLHttpRequest();	
+				xhr.open('get','../ajax/links/1.txt', true);
+				xhr.send();
+
+				xhr.onreadystatechange = function() {
+					if(xhr.readyState == 4) {
+						alert(xhr.responseText);
+
+					}
+				}
+			}
+		</script>
+	</body>
+
+</html>

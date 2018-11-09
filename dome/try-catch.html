@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>js胡的异常处理</title>
+	</head>
+	<body>
+		<input type="button"value="按钮1" id="btn1" />
+		<input type="button"value="按钮2" id="btn2"/>
+		
+		<script>
+			var oBtn1=document.getElementById('btn1');
+			var oBtn2=document.getElementById('btn2');
+			
+			
+			//异常处理
+			oBtn1.onclick=function(){
+				try{
+					alert(myMessage);
+				}catch(e){
+					 alert(e.myMessage);
+				}finally{
+					alert("finally语句已经执行");
+				}
+			}
+			
+			oBtn2.onclick=function(){
+				var myMessage="你好！";
+				try{
+					alert(myMessage);
+				}catch(e){
+					 alert(e.myMessage);
+				}finally{
+					alert("finally语句已经执行");
+				}
+			}
+			
+			//异常处理的兼容写法
+			var xhr=null;
+			if(window.XMLHttpRequest){
+				xhr=new XMLHttpRequest();
+			
+			}else{
+				xhr=new ActiveXObject('Microsoft.XMLHTTP');
+			}
+			
+			try{
+				xhr=new XMLHttpRequest();
+			}catch(e){
+				xhr=new ActiveXObject('Microsoft.XMLHTTP');
+			}
+		</script>
+		
+	</body>
+</html>

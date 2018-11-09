@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>异常处理</title>
+<style>
+.myBtn{
+	background:#3498db;
+	color:#fff;
+	font-size:14px;
+	text-align:center;
+	width:100px;
+	height:36px;
+	line-height:34px;
+	border:none 0;
+	cursor:pointer;
+	margin-left:40px;
+}
+</style>
+<script>
+window.onload = function() {
+	
+	var oBtn = document.getElementById('btn');
+	var oBtn2 = document.getElementById('btn2');
+	
+	oBtn.onclick = function() {
+		
+		try {
+			alert(myMessage);
+		} catch (e) {
+			alert(e.message);
+		} finally {
+			alert("finally语句已执行");
+		}
+		
+	}
+	
+	oBtn2.onclick = function() {
+		var myMessage = "你好！"
+		try {
+			alert(myMessage);
+		} catch (e) {
+			alert(e.message);
+		} finally {
+			alert("finally语句已执行");
+		}
+		
+	}
+}
+</script>
+</head>
+
+<body>
+	<input type="button" value="执行有报错" id="btn" class="myBtn" />
+    
+    <input type="button" value="执行正确" id="btn2" class="myBtn" />
+</body>
+</html>

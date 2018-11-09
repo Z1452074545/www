@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>联想新闻中心-提供联想最新新闻,资讯报道,图片资讯</title>
+		<link rel="icon" type="" href="img/webfavico.ico"/>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/main.css"/>
+		<link rel="stylesheet" type="text/css" href="css/zixun.css"/>
+		<script src="js/ajax.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/js.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			window.onload=function(){
+				
+				var oNav=document.querySelectorAll('.header .nav #sp');
+				var oCon=document.querySelectorAll('.header .catenav');
+				mouse(oNav,oCon);
+			    
+			    
+			    var oNewLoBtn=document.querySelector(".news_content .news_right .news_list .load_more");
+			    var oNewLoNo=document.querySelector(".news_content .news_right .news_list .load_no");
+			    var oNewItem=document.querySelector(".news_content .news_right .news_list #news_item")
+				
+					var loading = false;
+					var page = 0;
+					//加载第一页
+					loadPage();
+					
+					//点击的时候加载下一页
+					oNewLoBtn.onclick = function() {
+						if(!loading){
+							loadPage();
+						}else{
+							oNewLoBtn.innerHTML ="没有更多新闻了";
+						}
+					}
+					function loadPage(){
+						loading = true;
+						oNewLoBtn.value = "加载中...";
+						//开始ajax请求
+						ajax('get','json/news.json','',function(data) {
+							//将返回的数据变为json对象。
+						var data = JSON.parse( data );
+						
+							//没有返回错误才开始加载数据
+							if(page<data.length){
+								var str = "";
+					
+								var item = data[page].item;
+										for (var j = 0; j < item.length; j++) {
+											str += '<div class="news_item">'+
+												'<span class="news_title">'+item[j].title+'</span>'+
+												'<span class="news_date">'+item[j].date+'</span>'+
+												'<div class="news_con">'+
+													'<a href="">'+item[j].con+'</a>'+
+												'</div>'+
+												'<div class="news_more">'+
+													'<a href="">'+
+													'更多详情'+
+													'</a>'+
+												'</div>'+
+											'</div>'	
+										}
+										
+								
+								oNewItem.innerHTML += str;
+								page++;
+								loading = false;
+								
+							}else{
+								oNewLoBtn.innerHTML ="没有更多新闻了";
+								
+							}
+				
+							
+						});
+					}
+				
+				
+				
+				
+				
+				window.onscroll=function(){
+					var hea=document.querySelector('.header');
+					var logo=document.getElementById("logo");
+					var logo2=document.querySelector(".header .logo2");
+					
+					
+					if (scroll().top>300) {
+						logo.style.opacity="0";
+						logo2.style.opacity="1";
+						hea.classList.add('backwhite'); 
+						
+					} else{
+						logo.style.opacity="1";
+						logo2.style.opacity="0";
+						hea.classList.remove('backwhite');
+					}
+				}
+			}
+		</script>
+		
+	</head>
+	<body >
+		<!--start logo-->
+		<div id="logo">
+			<a href="">
+				<img src="img/logo.jpg"/>
+			</a>
+		</div>
+		<!--end logo-->
+		
+		<!--start header-->
+		<div class="header ">
+			<a class="logo2" href="">
+					<img src="img/logo2.jpg"/>
+				</a>
+			<div class="inner">
+				
+				<ul class="nav">
+					<li>
+						<a href="">
+							个人&amp;家用产品
+						</a>
+					</li>
+					<li id="sp">
+						<a href="">
+							<span>商用&amp;解决方案</span>
+							<span class="per_down"></span>
+						</a>
+						<!--分类导航     开始-->
+						<div class="catenav">
+							
+								<ul class="title">
+									<li>
+										<a href="">
+											<img src="img/nav1.png"/>
+											<p>商用电脑</p>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<img src="img/nav2.png"/>
+											<p>企业级</p>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<img src="img/nav3.png"/>
+											<p>解决方案</p>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<img src="img/nav4.png"/>
+											<p>移动互联</p>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<img src="img/nav5.png"/>
+											<p>周边产品</p>
+										</a>
+									</li>
+								</ul>
+								
+								<div class="content">
+									<div style="display: block;" class="content1">
+										<ul>
+											<li>
+												<a class="first_a" href="">笔记本</a>
+												<a href="">邵阳</a>
+												<a href="">扬天</a>
+												<a href="">ThinkPad</a>
+											</li>
+											<li>
+												<a class="first_a" href="">台式机</a>
+												<a href="">分体台式机</a>
+												<a href="">一体台式机</a>
+												<a href="">迷你台式机</a>
+												<a href="">瘦客户机</a>
+												<a href="">扬天</a>
+												
+											</li>
+											<li>
+												<a class="first_a" href="">工作站</a>
+												<a href="">移动工作站</a>
+												<a href="">ThinkStation</a>
+											</li>
+										</ul>
+									</div>
+									<div class="content2">
+										<ul>
+											<li>
+												<a class="first_a" href="">服务器</a>
+												<a href="">塔式服务器</a>
+												<a href="">机架式服务器</a>
+												<a href="">刀片服务器</a>
+												<a href="">高密度服务器</a>
+												<a href="">服务器配件</a>
+											</li>
+											<li>
+												<a class="first_a" href="">存储</a>
+												<a href="">SAN存储</a>
+												<a href="">NAS存储</a>
+												<a href="">光纤交换机</a>
+												<a href="">存储软件</a>
+												<a href="">存储带</a>
+												
+											</li>
+											<li>
+												<a class="first_a" href="">网络设备</a>
+												<a href="">架顶式交换机</a>
+												
+											</li>
+											<li>
+												<a class="first_a" href="">融合架构</a>
+												<a href="">ThinkAgile SX2200N</a>
+												<a href="">ThinkAgile SX2201N</a>
+												<a href="">ThinkAgile SX2202N</a>
+												<a href="">ThinkAgile SX2203N</a>
+											</li>
+										</ul>
+									</div>
+									<div class="content3">
+										<ul>
+											<li>
+												<a class="first_a" href="">数据中心解决方案</a>
+							
+											</li>
+											<li>
+												<a class="first_a" href="">行业应用解决方案</a>
+							
+											</li>
+											
+										</ul>
+									</div>
+									<div class="content4">
+										<ul>
+											<li>
+												<a class="first_a" href="">TAB系列</a>
+												
+											</li>
+											<li>
+												<a class="first_a" href="">YOGA系列</a>
+												
+											</li>
+											<li>
+												<a class="first_a" href="">PHAB系列</a>	
+											</li>
+										</ul>
+									</div>
+									<div class="content5">
+										<ul>
+											<li>
+												<a class="first_a" href="">显示器</a>
+												<a href="">通用显示器</a>
+												<a href="">专业显示器</a>
+											</li>
+											<li>
+												<a class="first_a" href="">智能眼镜</a>
+												<a href="">C100</a>
+												<a href="">C200</a>
+												<a href="">M100</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+						</div>			
+						<!--分类导航   结束-->
+					</li>
+					<li>
+						<a href="index.html">首页</a>	
+					</li>
+					<li>
+						<a href="xing.html">绝地挑战</a>		
+					</li>
+					<li>
+						<a href="">服务</a>	
+					</li>
+					<li>
+						<a href="">咨询</a>	
+					</li>
+					<li>
+						<a href="">门店</a>	
+					</li>
+				</ul>
+			
+				<div class="search">
+					<a href="">
+						<span ></span>
+					</a>
+					<input class="" placeholder="智能头盔" type="text">
+				</div>
+				
+				<ul class="user">
+					<li>
+						<a href=""></a>
+					</li>
+					<li>
+						<a href=""></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	
+		<!--新闻内容主题-->
+		<div class="news_content">
+			<div class="inner">
+				<div class="news_left">
+					<h2>新闻资讯</h2>
+					<ul>
+						<li class="now"><a href="">新闻中心</a></li>
+						<li><a href="">视频中心</a></li>
+					</ul>
+				</div>
+				
+				<div class="news_right">
+					<div class="news_pic">
+						<a href=""><img src="img/xw1.jpg"/></a>
+						<a href=""><img src="img/xw2.jpg"/></a>
+					</div>
+					
+					
+					<div class="news_list">
+						<div class="new_list">
+							<div class="news_timer">
+								<span class="choose_year">请选择联想年份：</span>				
+								<select name="" id="news_select">
+									<option value="2018">2018</option>
+								</select>				
+
+							</div>
+						</div>
+						
+						
+						<div id="news_item">
+							<!--<div class="news_item">
+								<span class="news_title">联想巨人轻盈转身，发力新零售将再续“传奇”</span>
+								<span class="news_date">2018/1/18</span>
+								<div class="news_con">
+									<a href="">
+										科技圈内，最近的目光都集中在了一年一度的全球顶级消费电子展会CES展上。来自世界各国的人工智能、VR/AR等最新技术、以及各种智能硬件产品成为展会的焦点，特别是中国“智”造，让世界都眼前一亮。 &nbsp;&nbsp; ...
+									</a>
+								</div>
+								<div class="news_more">
+									<a href="">
+										更多详情
+									</a>
+								</div>
+							</div>-->
+						</div>
+						
+						<div class="load_more" >点击加载更多</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	
+	
+		<!--start footer-->
+		<div class="footer">
+			<ul class="footer_top">
+				<li class="about_lenovo">
+                	<a class="foot_top_title" href="https://news.lenovo.com.cn/news/list.html" title="关于联想" target="_blank">关于联想</a>
+                	<a href="http://appserver.lenovo.com.cn/About/Introduction.html" title="公司介绍" target="_blank" latag="latag_pc_common_bottommost_lenovo_1_http://appserver.lenovo.com.cn/About/Introduction.html">公司介绍</a>
+                	<a href="http://appserver.lenovo.com.cn/IR/" title="投资者关系" target="_blank" latag="latag_pc_common_bottommost_lenovo_2_http://appserver.lenovo.com.cn/IR/">投资者关系</a>
+                	<a href="http://www.lenovocareers.com/chi/index.html" title="工作机会" target="_blank" latag="latag_pc_common_bottommost_lenovo_3_http://www.lenovocareers.com/chi/index.html">工作机会</a>
+                	<a href="http://appserver.lenovo.com.cn/Public/public_bottom/contact.shtml" title="联系我们" target="_blank" latag="latag_pc_common_bottommost_lenovo_4_http://appserver.lenovo.com.cn/Public/public_bottom/contact.shtml">联系我们</a>
+                	<a href="https://mall.lenovo.com.cn/" title="销售网点查询" target="_blank" latag="latag_pc_common_bottommost_lenovo_5_https://mall.lenovo.com.cn/">销售网点查询</a>
+                	<a href="http://support.lenovo.com.cn/lenovo/wsi/station/servicestation/default.aspx" title="服务网点查询" target="_blank" latag="latag_pc_common_bottommost_lenovo_6_http://support.lenovo.com.cn/lenovo/wsi/station/servicestation/default.aspx">服务网点查询</a>
+           		</li>
+           		<li class="shop_lenovo">
+               	 	<a class="foot_top_title" href="https://shop.lenovo.com.cn/" title="联想商城" target="_blank">联想商城</a>
+                	<a href="https://shop.lenovo.com.cn/stryout/tryhtml/index.html" title="0元试用" target="_blank" latag="latag_pc_common_bottommost_shop_1_https://shop.lenovo.com.cn/stryout/tryhtml/index.html">0元试用</a>
+                	<a href="https://shop.lenovo.com.cn/activity/marketing/jsd/index.html" title="急速达" target="_blank" latag="latag_pc_common_bottommost_shop_2_https://shop.lenovo.com.cn/activity/marketing/jsd/index.html">急速达</a>
+                	<a href="https://shop.lenovo.com.cn/c2c/new/c2c_center.html" title="联想合伙人" target="_blank" latag="latag_pc_common_bottommost_shop_3_https://shop.lenovo.com.cn/c2c/new/c2c_center.html">联想合伙人</a>
+                	<a href="https://shop.lenovo.com.cn/lenovomaker/index" title="私人定制" target="_blank" latag="latag_pc_common_bottommost_shop_4_https://shop.lenovo.com.cn/lenovomaker/index">私人定制</a>
+                	<a href="https://shop.lenovo.com.cn/oldfornew/oldchangenew.html" title="以旧换新" target="_blank" latag="latag_pc_common_bottommost_shop_5_https://shop.lenovo.com.cn/oldfornew/oldchangenew.html">以旧换新</a>
+          		</li>
+          		<li class="service_lenovo">
+                	<a class="foot_top_title" href="http://support.lenovo.com.cn/lenovo/wsi/index.html" title="联想服务" target="_blank">联想服务</a>
+                	<a href="http://support.lenovo.com.cn/lenovo/wsi/Modules/NewDrive.aspx" title="驱动与软件下载" target="_blank" latag="latag_pc_common_bottommost_service_1_http://support.lenovo.com.cn/lenovo/wsi/Modules/NewDrive.aspx">驱动与软件下载</a>
+                	<a href="http://iknow.lenovo.com/" title="联想知识库" target="_blank" latag="latag_pc_common_bottommost_service_7_http://iknow.lenovo.com/">联想知识库</a>
+                	<a href="http://robot.lenovo.com.cn/lenovo/?channel=H325B" title="24小时智能客服" target="_blank" latag="latag_pc_common_bottommost_service_2_http://robot.lenovo.com.cn/lenovo/?channel=H325B">24小时智能客服</a>
+                	<a href="http://support.lenovo.com.cn/lenovo/wsi/Modules/Newbxpz.aspx" title="保修配置查询" target="_blank" latag="latag_pc_common_bottommost_service_3_http://support.lenovo.com.cn/lenovo/wsi/Modules/Newbxpz.aspx">保修配置查询</a>
+                	<a href="http://support.lenovo.com.cn/lenovo/wsi/htmls/policylist_1349943520435.aspx" title="服务政策查询" target="_blank" latag="latag_pc_common_bottommost_service_4_http://support.lenovo.com.cn/lenovo/wsi/htmls/policylist_1349943520435.aspx">服务政策查询</a>
+                	<a href="http://www.xiangbangbang.cn/pc?utm_source=lenovoPC&amp;utm_content=index" title="上门快修" target="_blank" latag="latag_pc_common_bottommost_service_5_http://www.xiangbangbang.cn/pc?utm_source=lenovoPC&amp;utm_content=index">上门快修</a>
+                	<a href="https://shop.lenovo.com.cn/home/serviceindex.html?tag=a111&amp;intcmp=SS_F_YCBX&amp;SourceFlag=Support_MA&amp;CheckCode=Test123" title="延长保修" target="_blank" latag="latag_pc_common_bottommost_service_6_https://shop.lenovo.com.cn/home/serviceindex.html?tag=a111&amp;intcmp=SS_F_YCBX&amp;SourceFlag=Support_MA&amp;CheckCode=Test123">延长保修</a>
+           		</li>
+           		<li class="flenovo_website_group">
+                	<a class="foot_top_title" href="http://support.lenovo.com.cn/lenovo/wsi/index.html" title="联想服务" target="_blank">联想网站群</a>
+           			<a href="https://guanjia.lenovo.com.cn/" title="联想电脑管家" target="_blank" latag="latag_pc_common_bottommost_websites_1_https://guanjia.lenovo.com.cn/">联想电脑管家</a>
+                	<a href="http://www.lenovocloud.com/" title="联想超融合" target="_blank" latag="latag_pc_common_bottommost_websites_2_http://www.lenovocloud.com/">联想超融合</a>
+                	<a href="http://research.lenovo.com" title="联想研究院" target="_blank" latag="latag_pc_common_bottommost_websites_3_http://research.lenovo.com">联想研究院</a>
+                	<a href="http://www.lenovohit.com" title="智慧医疗" target="_blank" latag="latag_pc_common_bottommost_websites_4_http://www.lenovohit.com">智慧医疗</a>
+                	<a href="//www.lenovovip.com.cn/" title="聚享汇" target="_blank" latag="latag_pc_common_bottommost_websites_5_https://www.lenovovip.com.cn/">聚享汇</a>
+                	<a href="http://rental.lenovo.com.cn/" title="联想租赁商城" target="_blank" latag="latag_pc_common_bottommost_websites_6_http://rental.lenovo.com.cn/">联想租赁商城</a>
+                	<a href="https://box.lenovo.com/?C=LXGW" title="联想企业网盘" target="_blank" latag="latag_pc_common_bottommost_websites_7_https://box.lenovo.com/?C=LXGW">联想企业网盘</a>
+            	</li>
+            	<li class="social_platform">
+	                <a class="foot_top_title" href="">联想官方社交平台</a>
+	                <ul class="social_plat">
+	                    <li class="wecat">
+	                    	<a href=""></a>
+	                    </li>
+	                    <li class="qqzone">
+	                    	<a href=""></a>
+	                    </li>
+	                    <li class="weibo">
+	                    	<a href=""></a>
+	                    </li>
+	                    <li class="tieba">
+	                    	<a href=""></a>
+	                    </li>
+					</ul>
+					<div class="clearfix">
+	                    <a href="" class="weibo_icon" ></a>
+	                    <a href="" class="tieba1" ></a>
+               		 </div>
+               		 <div class="cn_img"></div
+				</li>
+			</ul>
+			<div class="foot_bot">
+	            <div class="foot_bot_con">
+	                <div class="foot_bot_left">
+	                    	版权所有：1998-2017 联想集团
+	                    <span>|</span><a href="" title="法律公告">法律公告</a>
+	                    <span>|</span><a href="" title="隐私保护">隐私保护</a>
+	                </div>
+	                <div class="foot_bot_right">
+	                    <a href="">京ICP备11035381</a>
+	                    <span>|</span><i style="font-style:normal;">京公网安备110108007970号</i>
+	                    <span>|</span><a href="" title="营业执照">营业执照：110000410127232</a>
+	                </div>
+	            </div>
+			 </div>
+		</div>
+		<!--end footder-->
+	
+	</body>
+</html>

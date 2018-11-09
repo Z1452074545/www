@@ -1,0 +1,566 @@
+/*去除a标签默认样式*/
+a {
+    text-decoration: none;
+}
+
+/*设置网页字体*/
+html, body {
+    font-family: "微软雅黑";
+}
+
+/*引入精灵图*/
+i {
+    background: url("../imgs/jlt.png");
+
+}
+
+/*//网易导航*/
+.wy {
+    width: 100%;
+    height: 55px;
+    background: rgb(251, 251, 251);
+}
+
+/*网易导航版心*/
+.wy_nav {
+    width: 1260px;
+    height: 55px;
+    background: rgb(251, 251, 251);
+    margin: auto;
+    position: relative;
+}
+
+/*网易logo*/
+.wy_logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/*显示 影藏*/
+.wy_center {
+    width: 422px;
+    height: 55px;
+    background: url("../imgs/wy1-1.jpg");
+    position: absolute;
+    left: 140px;
+}
+
+/*网易导航右侧文字*/
+.wy_right {
+    position: absolute;
+    right: 0;
+}
+
+/*设置样式*/
+.wy_right ul li {
+    float: left;
+    height: 55px;
+    line-height: 55px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.wy_right ul li a {
+    color: rgb(51, 51, 51);
+}
+
+.wy_right ul li:hover {
+    box-sizing: border-box;
+    border-bottom: 2px solid rgb(188, 46, 46);
+    background: rgb(246, 246, 246);
+}
+
+.wy_right ul li a:hover {
+    color: rgb(188, 46, 46);
+}
+
+/*网易导航隐藏部分*/
+.wy_yc1 {
+    position: absolute;
+    top: 55px;
+    left: 0;
+    display: none;
+    z-index: 10;
+}
+
+.wy_yc2 {
+    position: absolute;
+    top: 55px;
+    left: 0;
+    display: none;
+    z-index: 10;
+}
+
+/*镇魔曲导航*/
+.zmq {
+    width: 100%;
+    height: 110px;
+    background: url("../imgs/zmq_nav_bg.png");
+    position: absolute;
+    top: 55px;
+    z-index: 9;
+
+}
+
+.zmq_fixed {
+    position: fixed;
+    top: 0;
+}
+
+/*镇魔曲版心*/
+.zmq_nav {
+    width: 1200px;
+    height: 110px;
+    margin: auto;
+    position: relative;
+    z-index: 10;
+}
+
+/*镇魔曲logo*/
+.zmq_logo {
+    position: absolute;
+    top: 20px;
+
+}
+
+/*设置样式*/
+.zmq_left {
+    width: 240px;
+    height: 110px;
+    position: absolute;
+    top: 0;
+    left: 190px;
+    text-align: right;
+    color: rgb(156, 148, 116);
+}
+
+.zmq_left h1 {
+    font-size: 24px;
+    margin-top: 35px;
+}
+
+.zmq_left p {
+    line-height: 28px;
+}
+
+/*镇魔曲中间文字导航*/
+.zmq_center {
+    position: absolute;
+    top: 35px;
+    left: 450px;
+}
+
+.zmq_center ul li {
+    float: left;
+    width: 130px;
+
+}
+
+.zmq_center ul li a {
+    color: #8d8b7c;
+    font-size: 16px;
+}
+
+.zmq_center ul li a:hover {
+    color: rgb(241, 220, 134);
+}
+
+.zmq_lin {
+    width: 430px;
+    height: 2px;
+    position: absolute;
+    top: 78px;
+    left: 460px;
+    background: rgb(241, 220, 134);
+}
+
+.zmq_right {
+    width: 260px;
+    height: 40px;
+    background: url("../imgs/zmq_nav_right.png");
+    position: absolute;
+    top: 35px;
+    right: 0;
+    cursor: pointer;
+}
+
+.r_l {
+    width: 125px;
+    height: 40px;
+    float: left;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.r_r {
+    width: 125px;
+    height: 40px;
+    float: right;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.r_l:hover {
+    opacity: 0;
+}
+
+.r_r:hover {
+    opacity: 0;
+}
+
+/*横幅广告*/
+.banner {
+    width: 100%;
+    height: 800px;
+    position: relative;
+    overflow: hidden;
+}
+
+.banner ul {
+    width: 100%;
+    height: 800px;
+    position: absolute;
+}
+
+.banner ul li {
+    width: 100%;
+    height: 800px;
+
+}
+
+.banner ul li img {
+    width: 100%;
+    height: 800px;
+}
+
+/*立即注册*/
+.zhuce {
+    width: 100%;
+    height: 400px;
+    background: url("../imgs/zhuce_bg.jpg");
+    background-size: 100% 400px;
+    border-bottom: 2px solid rgb(251, 251, 251);
+    box-sizing: border-box;
+}
+
+.zhuce_contert {
+    width: 1200px;
+    height: 398px;
+    margin: auto;
+}
+
+.zhuce_box {
+    width: 340px;
+    height: 398px;
+    float: left;
+
+}
+
+.n_zhuce {
+    float: left;
+}
+
+.n_1{
+    width: 340px;
+    height: 60px;
+    position: relative;
+}
+
+.n_1 p {
+    display: inline-block;
+    position: absolute;
+    top: 20px;
+    left: 75px;
+    font-size: 28px;
+    color: rgb(150, 147, 149);
+}
+
+#inp1 {
+    width: 326px;
+    height: 40px;
+    margin-top: 20px;
+    background: rgb(28, 35, 42);
+    color: rgb(138, 134, 108);
+    padding: 5px;
+    border: 0 none;
+
+}
+
+.jieshou1 {
+    width: 340px;
+    height: 20px;
+    text-align: right;
+    color: red;
+}
+
+#inp2 {
+    width: 326px;
+    height: 40px;
+    background: rgb(28, 35, 42);
+    color: rgb(138, 134, 108);
+    padding: 5px;
+    border: 0 none;
+}
+
+.jieshou2 {
+    width: 340px;
+    height: 20px;
+    text-align: right;
+    color: red;
+}
+
+/*.n_2{*/
+/*margin-top: 20px;*/
+/*}*/
+.t_zhuce {
+    background: url("../imgs/t_zhuce_bg.png") no-repeat;
+    margin-left: 90px;
+}
+
+.jsxz {
+    width: 330px;
+    height: 255px;
+    background: white;
+    margin-top: 80px;
+
+}
+
+.n_2 p {
+    color: rgb(138, 134, 116);
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+.s_zhuce {
+    float: right;
+    background: url("../imgs/s_zhuce_bg.png") no-repeat;
+}
+
+.gclb {
+    width: 330px;
+    height: 60px;
+    margin-top: 272px;
+    cursor: pointer;
+}
+
+/*模态框*/
+.motaik {
+    width: 100%;
+    height: 3740px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 11;
+    background: rgba(0, 0, 0, 0.7);
+    display: none;
+}
+
+.mtk_1 {
+    width: 844px;
+    height: 655px;
+    position: relative;
+    position: absolute;
+    top: 450px;
+    left: 50%;
+    margin-left: -422px;
+    background: url("../imgs/mtk_bg.png");
+    display: none;
+}
+
+.mtk_x {
+    width: 75px;
+    height: 75px;
+    background: url("../imgs/mtk_x.jpg");
+    position: absolute;
+    top: 113px;
+    right: -75px;
+    cursor: pointer;
+}
+
+.contert {
+    width: 100%;
+    height: 2484px;
+    background: url("../imgs/body-bg.jpg");
+    background-size: 100% 2484px;
+    position: relative;
+}
+
+.ct1 {
+    width: 650px;
+    height: 50px;
+    position: absolute;
+    top: 120px;
+    left: 50%;
+    margin-left: -325px;
+
+}
+
+.ct1 i {
+    display: block;
+    width: 650px;
+    height: 30px;
+    background-position: 0px -1127px;
+}
+
+.ct2 {
+    width: 1210px;
+    height: 321px;
+    position: absolute;
+    position: absolute;
+    left: 50%;
+    top: 200px;
+    margin-left: -600px;
+}
+.ct2 ul{
+    display: none;
+}
+.ct1_top {
+    width: 260px;
+    height: 50px;
+    position: absolute;
+    top: 120px;
+    left: 22%;
+}
+.ct1_top ul li.new_bg{
+    background: rgba(250,250,250,0.5);
+}
+.ct1_top ul li{
+    float: left;
+    width: 100px;
+    height: 50px;
+    background: rgba(230,230,230,0.3);
+    line-height: 50px;
+    text-align: center;
+    margin-left: 20px;
+}
+.ct1_top ul li a{
+    color: rgb(203,193,150);
+}
+
+.ct2 div {
+    width: 227px;
+    height: 321px;
+    float: left;
+    margin-right: 15px;
+    cursor: pointer;
+}
+.ct2 div:hover {
+    margin-top: -15px;
+    transition: ease-in 0.4s;
+}
+.ct3{
+    width: 650px;
+    height: 30px;
+    position: absolute;
+    top: 640px;
+    left: 50%;
+    margin-left: -325px;
+}
+.ct3 i{
+    display: block;
+    width: 650px;
+    height: 30px;
+    background-position: -621px -1091px;
+}
+.ct4{
+    width: 1200px;
+    height: 360px;
+    position: relative;
+    position: absolute;
+    top: 750px;
+    left: 50%;
+    margin-left: -600px;
+    overflow: hidden;
+}
+.h_d{
+    width: 8400px;
+    position: absolute;
+    transition: all 1s;
+}
+.h_d img{
+    float: left;
+}
+.ct4 a{
+    width: 30px;
+    height: 70px;
+    background:rgba(250,250,250,0.2);
+    position: absolute;
+    top: 45%;
+    text-align: center;
+    line-height: 70px;
+    font-size: 30px;
+    color: rgb(203,193,150);
+}
+.ct4 a:hover{
+    background:rgba(200,200,200,0.6);
+}
+#hd_right{
+    right: 0;
+}
+.ct_dian{
+    width: 580px;
+    position: absolute;
+    top: 1100px;
+    left: 50%;
+    margin-left: -290px;
+}
+.ct_dian ul li{
+    float: left;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.ct_dian ul li img{
+    width: 105px;
+    height: 60px;
+}
+.ct5{
+    width: 650px;
+    height: 30px;
+    position: absolute;
+    top: 1300px;
+    left: 50%;
+    margin-left: -325px;
+}
+.ct5 i{
+    display: block;
+    width: 650px;
+    height: 30px;
+    background-position: 0px -1092px;
+}
+.ct6{
+    width: 1120px;
+    height: 312px;
+    position: relative;
+    position: absolute;
+    top: 1420px;
+    left: 50%;
+    margin-left: -570px;
+    background: url("../imgs/ct6_bg.png");
+}
+.ct6_1{
+    position: absolute;
+    /*top: 0;*/
+    /*left: 0;*/
+    top: 200px;
+    left: 43%;
+    /*margin-left: -95px;*/
+    cursor: pointer;
+}
+.ct7{
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 30px;
+    color: whitesmoke;
+    opacity: 0.7;
+    font-size: 25px;
+    font-weight: bold;
+    background: rgb(3,21,43);
+    position: fixed;
+    top: 900px;
+    right: 50px;
+    cursor: pointer;
+}
+.ct7:hover{
+    box-shadow: 0 0 25px #999;
+}

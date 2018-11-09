@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        #box{
+            width: 600px;
+            height: 400px;
+            background: oldlace;
+            border: 1px solid #999;
+            overflow: auto;
+        }
+
+    </style>
+    <script src="js/jquery-1.8.3.min.js"></script>
+</head>
+<body>
+<button id="btn">点击加载</button>
+<div id="box">
+    <!--<ul id="box_ul">-->
+        <!--<li>1111111111</li>-->
+        <!--<li>222222222</li>-->
+        <!--<li>33333333333</li>-->
+        <!--<li>444444444444</li>-->
+    <!--</ul>-->
+</div>
+<script>
+//  $(function(){
+//      $("#btn").on("click",function(){
+//          $.post("js/index.json",function(shuju){
+//              console.log(shuju);
+//              var _shuju=eval(shuju);
+//              $.each(_shuju,function(i){
+////                   var _t_xt=_shuju[i];
+////                  console.log(_t_xt);
+//                  $("<ul>"+"<li>"+_shuju[i].name+"</li>"+
+//                  "<li>"+_shuju[i].tge+"</li>"+
+//                  "<li>"+_shuju[i].title+"</li>"+
+//                  "<li>"+_shuju[i].dis+"</li>"+"</ul>").appendTo("#box")
+//              })
+//          })
+//      })
+//  })
+//    $(function(){
+//        $("#btn").on("click",function(){
+//            $.post("js/index.json",function(shuju){
+//                   console.log(shuju);
+//                var _shuju=eval(shuju);
+//
+//                $.each(_shuju,function(i){
+//                     $("<ul>"+"<li>"+_shuju[i].name+"</li>"+
+//                "<li>"+_shuju[i].tge+"</li>"+
+//                "<li>"+_shuju[i].title+"</li>"+
+//                     "<li>"+_shuju[i].dis+"</li>"+
+//                     "</ul>").appendTo("#box")
+//                })
+//            })
+//        })
+//    })
+
+    $(function(){
+        $("#btn").on("click",function(){
+            $.post("js/index.json",function(shuju){
+                console.log(shuju)
+                var _shuju=eval(shuju);
+                console.log(_shuju)
+                $.each(_shuju,function(i){
+                    $("<ul>"+"<li>"+_shuju[i].name+"</li>"
+                            +"<li>"+_shuju[i].tge+"</li>"
+                            +"<li>"+_shuju[i].title+"</li>"
+                            +"<li>"+_shuju[i].dis+"</li>"
+                    +"</ul>").appendTo("#box")
+                })
+            })
+        })
+    })
+</script>
+</body>
+</html>
